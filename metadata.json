@@ -1,0 +1,6 @@
+{
+  "name": "PhishShield AI — Advanced Offer Letter & Phishing Inspector",
+  "description": "Enterprise-grade cybersecurity dashboard designed to inspect job offer letters, rental agreements, documents (PDFs/Images), and recruiter URLs for scam signals, pay-for-equipment phishing, deposit traps, and domain anomalies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
