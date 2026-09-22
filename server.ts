@@ -351,6 +351,12 @@ Instructions:
     }
   });
 
+  // Download full project zip route
+  app.get(['/phishshield-ai.zip', '/download-zip', '/api/download-zip'], (_req, res) => {
+    const zipPath = path.join(process.cwd(), 'public', 'phishshield-ai.zip');
+    res.download(zipPath, 'phishshield-ai.zip');
+  });
+
   // Setup Vite or Static File Serving
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({

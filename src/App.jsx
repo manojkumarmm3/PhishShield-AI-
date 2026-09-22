@@ -1315,6 +1315,20 @@ ${currentResult.recommendedActions.map((a, i) => `[ ] ${a}`).join('\n')}
               <RotateCcw className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">New Scan</span>
             </motion.button>
+
+            <motion.a
+              id="download-zip-btn-jsx"
+              href="/phishshield-ai.zip"
+              download="phishshield-ai.zip"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
+              transition={springPreset}
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-cyan-300 hover:text-white bg-cyan-950/40 border border-cyan-800/60 hover:bg-cyan-900/50 cursor-pointer shadow-sm transition-colors"
+              title="Download Full Project Source Code (ZIP)"
+            >
+              <Download className="w-3.5 h-3.5 text-cyan-400" />
+              <span className="hidden sm:inline">Download ZIP</span>
+            </motion.a>
           </div>
 
         </div>
