@@ -856,6 +856,7 @@ export default function App() {
   // --- RESILIENT GEMINI EXECUTION WITH MODEL FALLBACK & BACKOFF ---
   const callGeminiWithResilience = async (prompt, mimeType = null, base64Data = null, aiInstance = null) => {
     const models = [
+      'gemini-2.5-flash',
       'gemini-1.5-flash',
       'gemini-1.5-pro',
       'gemini-2.0-flash',
@@ -1280,7 +1281,7 @@ ${currentResult.recommendedActions.map((a, i) => `[ ] ${a}`).join('\n')}
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <span className="text-xs font-mono font-medium text-slate-300">
-                ● Gemini AI Active
+                ● Gemini 2.5 Active
               </span>
             </div>
 

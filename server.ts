@@ -147,7 +147,7 @@ async function startServer() {
     res.json({
       status: 'ok',
       hasApiKey: !!process.env.GEMINI_API_KEY,
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.5-flash',
       timestamp: new Date().toISOString()
     });
   });
@@ -268,8 +268,9 @@ Instructions:
       let responseText: string | null = null;
       let lastError: any = null;
 
-      // Model Endpoints: Primary (gemini-1.5-flash), Secondary (gemini-1.5-pro), Tertiary (gemini-2.0-flash / latest stable endpoints)
+      // Model Endpoints: Primary (gemini-2.5-flash), Secondary (gemini-1.5-flash), Tertiary (gemini-2.0-flash / fallback endpoints)
       const models = [
+        'gemini-2.5-flash',
         'gemini-1.5-flash',
         'gemini-1.5-pro',
         'gemini-2.0-flash',
